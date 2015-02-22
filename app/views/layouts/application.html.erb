@@ -29,12 +29,19 @@
         <aside class="left-off-canvas-menu">
             <!-- whatever you want goes here -->
             <ul>
-              <li><a href="#">menslow</a></li>
+            <% if user_signed_in? %>
+              <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+            <% end %>
               <li><a href="#">Leads</a></li>
               <li><a href="#">Tasks</a></li>
               <li><a href="#">Clients</a></li>
             </ul>
         </aside>
+
+        <div class="row">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        </div>
 
         <!-- main content goes here -->
         <%= yield %>

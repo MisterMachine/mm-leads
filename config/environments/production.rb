@@ -68,6 +68,9 @@ Rails.application.configure do
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
 
+  # Define default_url_options - required for Device User Authentication
+  # config.action_mailer.default_url_options = { host: 'example.com', port: 80 }
+
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
