@@ -13,7 +13,38 @@
 
   <body>
 
-    <%= yield %>
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+        <nav class="tab-bar">
+          <div class="left-small">
+            <a role="button" aria-expanded="false" aria-controls="idOfLeftMenu" class="left-off-canvas-toggle menu-icon" ><span></span></a>
+          </div>
+          <section class="middle tab-bar-section">
+            <h1 class="title">Mister Machine Leads</h1>
+          </section>
+        </nav>
+
+        <!-- Off Canvas Menu -->
+        <aside class="left-off-canvas-menu">
+            <!-- whatever you want goes here -->
+            <ul>
+              <li><a href="#">menslow</a></li>
+              <li><a href="#">Leads</a></li>
+              <li><a href="#">Tasks</a></li>
+              <li><a href="#">Clients</a></li>
+            </ul>
+        </aside>
+
+        <!-- main content goes here -->
+        <%= yield %>
+
+      <!-- close the off-canvas menu -->
+      <a class="exit-off-canvas"></a>
+
+      </div>
+    </div>
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>
