@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # multithreaded webserver
@@ -50,9 +49,6 @@ group :development, :test do
   gem 'spring'
 end
 
-group :production do
-  # Rails 12factor gem for Heroku deployment
-  gem 'rails_12factor'
-end
+gem 'rails_12factor', group: :production
 
-
+ruby "2.1.2"
