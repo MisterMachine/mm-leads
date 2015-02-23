@@ -6,6 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+# Leads
+
+Lead.delete_all
+
 Lead.create(name: 'Redesign and Front End Development', 
   description:'Three phases of front end design and development and ensure that the designs feels fluid and native in the browser.  The process will include a content review, component definition and the development of a front-end pattern library to accelerate back-end development of the ambitious publication.', 
   budget:16000,
@@ -50,3 +54,35 @@ Lead.create(name: 'Development Discovery',
   won:false,
   active:true
 )
+
+# Clients
+
+Client.delete_all
+
+Client.create(user_id: 1, 
+  name: 'Apple',
+  address: '1 Infinite Loop, Cupertino, CA',
+  phone: '(408) 996-1010',
+  website: 'apple.com',
+  twitter: 'apple',
+  facebook: 'facebook.com/apple'
+)
+
+Client.create(user_id: 1, 
+  name: 'Google',
+  address: '1600 Amphitheatre Pkwy, Mountain View, CA',
+  phone: '(650) 253-0000',
+  website: 'google.com',
+  twitter: 'google',
+  facebook: 'facebook.com/google'
+)
+
+Client.create(user_id: 1, 
+  name: 'Facebook',
+  address: '1 Hacker Way, Menlo Park, CA 94025',
+  phone: '(650) 543-4800',
+  website: 'facebook.com',
+  twitter: 'facebook',
+  facebook: 'facebook.com/pages/Facebook-HQ/166793820034304'
+)
+
