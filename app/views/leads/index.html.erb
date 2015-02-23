@@ -5,9 +5,10 @@
   <li>
     <div class="panel">
       <h2><%= lead.name %></h2>
+      <p><%= lead.client_name %></p>
       <p><%= lead.description %></p>
-      <h3><%= lead.temperature %></h3>
-      <h3><%= lead.excitement %></h3>
+      <p><strong>Temperature: <%= number_to_percentage(lead.temperature, precision: 0) %></strong></p>
+      <p><strong>Excitement: <%= number_to_percentage(lead.excitement, precision: 0) %></strong></p>
       <p><%= link_to 'Show', lead %></p>
     </div>
   </li>
