@@ -18,24 +18,26 @@
 
         <nav class="tab-bar">
           <div class="left-small">
-            <a role="button" aria-expanded="false" aria-controls="idOfLeftMenu" class="left-off-canvas-toggle menu-icon" ><span></span></a>
+            <a role="button" aria-expanded="false" aria-controls="" class="left-off-canvas-toggle menu-icon" ><span></span></a>
           </div>
           <section class="middle tab-bar-section">
             <h1 class="title">Mister Machine Leads</h1>
           </section>
+          <div class="right">
+            <%= link_to 'New Lead', new_lead_path, :class => "button small" %>
+          </div>
         </nav>
 
         <!-- Off Canvas Menu -->
         <aside class="left-off-canvas-menu">
-            <!-- whatever you want goes here -->
-            <ul>
-            <% if user_signed_in? %>
-              <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
-            <% end %>
-              <li><%= link_to "Leads", leads_path %></li>
-              <li><a href="#">Tasks</a></li>
-              <li><%= link_to "Clients", clients_path %></li>
-            </ul>
+          <ul class="off-canvas-list">
+          <% if user_signed_in? %>
+            <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+          <% end %>
+            <li><%= link_to "Leads", leads_path %></li>
+            <li><a href="#">Tasks</a></li>
+            <li><%= link_to "Clients", clients_path %></li>
+          </ul>
         </aside>
 
         <div class="row">
