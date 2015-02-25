@@ -8,14 +8,16 @@
 <ul class="medium-block-grid-2 large-block-grid-3">
   <% @leads.each do |lead| %>
   <li>
+    <%= link_to(lead) do %>
     <div class="panel">
       <h2><%= lead.name %></h2>
       <p><%= lead.client_name %></p>
       <p><%= lead.description %></p>
       <p><strong>Temperature: <%= number_to_percentage(lead.temperature, precision: 0) %></strong></p>
       <p><strong>Excitement: <%= number_to_percentage(lead.excitement, precision: 0) %></strong></p>
-      <p><%= link_to 'Show', lead %></p>
+      <!-- <p><%= link_to 'Show', lead %></p> -->
     </div>
+    <% end %>
   </li>
   <% end %>
 </ul>
