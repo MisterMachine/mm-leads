@@ -16,7 +16,7 @@
     <%= f.text_field :name %>
   </div>
   <div class="row">
-    <%= f.label :name %><br>
+    <%= f.label :client %><br>
     <%= f.collection_select(:client_id, Client.all, :id, :name) %>
   </div>
   <div class="row">

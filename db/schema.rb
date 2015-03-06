@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150223031507) do
+ActiveRecord::Schema.define(version: 20150306041517) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,17 @@ ActiveRecord::Schema.define(version: 20150223031507) do
 
   add_index "leads", ["client_id"], name: "index_leads_on_client_id", using: :btree
 
+  create_table "tasks", force: :cascade do |t|
+    t.string   "name"
+    t.date     "due"
+    t.boolean  "completed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "lead_id"
+  end
+
+  add_index "tasks", ["lead_id"], name: "index_tasks_on_lead_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -63,4 +74,5 @@ ActiveRecord::Schema.define(version: 20150223031507) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "leads", "clients"
+  add_foreign_key "tasks", "leads"
 end
