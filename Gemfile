@@ -17,6 +17,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Bower for managing javascript dependancies
+gem 'bower', '~> 0.0.3'
+
 # Foundation front end framework
 gem 'foundation-rails'
 

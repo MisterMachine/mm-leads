@@ -10,6 +10,8 @@ class LeadsController < ApplicationController
   # GET /leads/1
   # GET /leads/1.json
   def show
+    @lead = Lead.find(params[:id])
+    @tasks = @lead.tasks
   end
 
   # GET /leads/new

@@ -10,11 +10,13 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+// Bower packages
+
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+
+// Custom
+//= require app
 //= require_tree .
 
-window.onload = function() {
-  $(document).foundation();
-};

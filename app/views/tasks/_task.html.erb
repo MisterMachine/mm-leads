@@ -1,0 +1,18 @@
+<div id="task-<%= task.id %>" class="panel">
+  <div class="row">
+    <div class="small-8 medium-10 columns">
+      <h4><%= task.name %></h4>
+    </div>
+    <div class="small-4 medium-2 columns">
+      <div class="switch round large">
+        <input id="task-1" type="checkbox">
+        <label for="task-1"></label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns">
+      <strong>menslow</strong> Due: <%= task.due %>
+    </div>
+  </div>
+</div>

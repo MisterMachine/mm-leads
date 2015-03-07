@@ -12,6 +12,11 @@
 <p><strong>Temperature:</strong> <%= number_to_percentage(@lead.temperature, precision: 0) %></p>
 <p><strong>Excitement:</strong> <%= number_to_percentage(@lead.excitement, precision: 0) %></p>
 
+<% if @lead.tasks.any? %>
+  <h3>Tasks:</h3>
+  <%= render @tasks %>
+<% end %>
+
 <h3>Notes:</h3>
 <p><%= @lead.notes %></p>
 
